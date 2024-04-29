@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 34px;
+    margin-top: 21px;
     /* flex-wrap: wrap; */
 }
 .button-container .btn1,.btn2,.btn3{
@@ -125,10 +125,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 76px);
+    height: 75vh;
     gap: 12px;
     flex-wrap: wrap;
     overflow-y: auto;
+    /* border: 2px solid; */
     /* padding: 45px; */
 }
 
@@ -167,5 +168,8 @@ body {
     }
     #btn1, #btn2, #btn3 {
         width: auto;
+    }
+    h1 {
+        font-size: 24px;
     }
 }
