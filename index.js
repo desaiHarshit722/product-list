@@ -59,18 +59,25 @@ const displayProducts = (productsArr) => {
 }
 
 menCategoryBtn.addEventListener("click", () => {
+    menCategoryBtn.classList.add("active-tab");
+    kidsCategoryBtn.classList.remove("active-tab");
+    womenCategoryBtn.classList.remove("active-tab");
     const menCategoryProducts = apiData.categories[0].category_products;
     displayProducts(menCategoryProducts);
 });
 
 womenCategoryBtn.addEventListener("click", () => {
-
+    womenCategoryBtn.classList.add("active-tab");
+    menCategoryBtn.classList.remove("active-tab");
+    kidsCategoryBtn.classList.remove("active-tab");
     const womenCategoryProducts = apiData.categories[1].category_products;
     displayProducts(womenCategoryProducts);
 });
 
 kidsCategoryBtn.addEventListener("click", () => {
-    
+    kidsCategoryBtn.classList.add("active-tab");
+    menCategoryBtn.classList.remove("active-tab");
+    womenCategoryBtn.classList.remove("active-tab");
     const kidsCategoryProducts = apiData.categories[2].category_products;
     displayProducts(kidsCategoryProducts);
 });
@@ -80,6 +87,7 @@ initData()
     .then((data) => {
         apiData = data;
         const menCategoryProducts = apiData.categories[0].category_products;
+        menCategoryBtn.classList.add("active-tab");
         console.log(menCategoryProducts)
         displayProducts(menCategoryProducts);
     })

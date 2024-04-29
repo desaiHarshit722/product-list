@@ -4,9 +4,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    /* overflow: hidden; */
+}
+
+body {
+    height: 100vh;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    overflow-x: hidden;
 }
 .heading-container{
-    margin-top: 34px;
+    margin-top: 24px;
 }
 .heading-container h1{
     text-align: center;
@@ -17,17 +25,19 @@
     justify-content: center;
     align-items: center;
     margin-top: 34px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .button-container .btn1,.btn2,.btn3{
-    padding: 8px 20px;
+    /* padding: 8px 20px; */
     background-color: transparent;
+    padding-bottom: 24px;
 }
 .button-container .btn1 button,.btn2 button,.btn3 button{
-    padding: 14px 40px;
+    width: 200px;
+    padding: 8px 12px;
     font-size: 20px;
     border: none;
-    border-radius: 21px;
+    /* border-radius: 5px; */
     cursor: pointer;
 }
 .btn1 button:hover,.btn2 button:hover,.btn3 button:hover{
@@ -35,7 +45,7 @@
     color: white;
 }
 .card1-display img{
-    height: 300px;
+    height: 200px;
 }
 .card1-display .womens-dress{
     display: flex;
@@ -102,21 +112,60 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* border: 2px solid red; */
     flex-wrap: wrap;
+    width: 280px;
 }
 .cards-items img{
-    height: 300px;
+    /* object-fit: contain; */
+    height: 250px;
+    /* width: 280px; */
 }
 .center-page{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    gap: 33px;
+    height: calc(100% - 76px);
+    gap: 12px;
     flex-wrap: wrap;
-    margin-top: 30px;
+    overflow-y: auto;
+    /* padding: 45px; */
+}
+
+#btn1, #btn2, #btn3 {
+    font-size: 16px;
+    margin: 0 12px;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
 }
 
 .active-tab {
     background-color: black;
+    color: white;
+}
+
+.container {
+    margin: 12px 0;
+    /* padding: 12px 0 !important; */
+    border-top: 2px solid;
+}
+
+@media (max-width: 640px) {
+    body {
+        /* overflow: auto; */
+        overflow-x: hidden !important;
+    }
+    .cards-items{
+        width: 300px;
+        border: 1px solid silver;
+        padding: 12px 0;
+    }
+    .center-page {
+        height: 500px;
+        overflow-y: scroll;
+    }
+    #btn1, #btn2, #btn3 {
+        width: auto;
+    }
 }
